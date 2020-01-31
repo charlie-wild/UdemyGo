@@ -12,11 +12,13 @@ func newDeck() deck {
 	cardSuits := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
 	cardValues := []string{"Ace", "Two", "Three", "Four"}
 
-	for i, suit := range cardSuits {
-		for j, value := range cardValues {
+	for _, suit := range cardSuits {
+		for _, value := range cardValues {
 			cards = append(cards, value+" of "+suit)
 		}
 	}
+
+	return cards
 }
 
 func (d deck) print() { // any variable of type deck gets access to this print method using the receiver
