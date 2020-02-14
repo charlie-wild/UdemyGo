@@ -7,7 +7,7 @@ func main() {
 	// array is fixed length ; slice is C# list or JS array
 	// both must be defined with a data type
 
-	//cards := newDeck()
+	cards := newDeck()
 	//cards = append(cards, "Six of Spades") //append returns a new slice
 	//cards.print()
 
@@ -19,7 +19,8 @@ func main() {
 	//fmt.Println(cards.toString())
 	//cards.saveToFile("my_cards")
 
-	cards := newDeckFromFile("my_cards")
+	//cards := newDeckFromFile("my_cards")
+	cards.shuffle()
 	cards.print()
 
 }
