@@ -66,7 +66,7 @@ func randomInt(min, max int) int {
 }
 
 func (d deck) shuffle() {
-	source := rand.NewSource(time.Now().UnixNano())
+	source := rand.NewSource(time.Now().UnixNano()) // genuine random generation
 	r := rand.New(source)
 	for i := range d {
 		newPosition := r.Intn(len(d) - 1)
