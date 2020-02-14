@@ -19,6 +19,7 @@ func main() {
 	//remainingDeck.print()
 
 	fmt.Println(cards.toString())
+	cards.saveToFile("my_cards")
 
 }
 
