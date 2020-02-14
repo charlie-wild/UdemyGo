@@ -8,9 +8,13 @@ func main() {
 	// both must be defined with a data type
 
 	cards := newDeck()
-	cards = append(cards, "Six of Spades") //append returns a new slice
+	//cards = append(cards, "Six of Spades") //append returns a new slice
+	//cards.print()
 
-	cards.print()
+	hand, remainingDeck := deal(cards, 5)
+
+	hand.print()
+	remainingDeck.print()
 
 }
 

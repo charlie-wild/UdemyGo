@@ -26,3 +26,7 @@ func (d deck) print() { // any variable of type deck gets access to this print m
 		fmt.Println(i, card)
 	}
 }
+
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
