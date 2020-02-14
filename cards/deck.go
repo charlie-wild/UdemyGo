@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
 	"strings"
 )
 
@@ -49,7 +50,11 @@ func newDeckFromFile(filename string) deck {
 	bs, err := ioutil.ReadFile(filename)
 	if err != nil {
 		// log error and return a call to newDeck()
-		
-	stringDeck := string(bs)
-	return strings.Split(stringDeck, ",")
+		// or log error and quit
+		fmt.Println("Error:", err)
+		os.Exit(1)
+
+	}
+	s := strings.Split(string(bs), ",")
+	return deck(s)
 }

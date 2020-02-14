@@ -16,3 +16,5 @@ Built in libaries in go often take in byte slices instead of strings.
 it can be done simply by []byte(string) to convert the data type.
 
 -- basic error handling
+ 
+ what to we want to do when there is an error?

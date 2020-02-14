@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	// var card string = "Ace of Spades" - below is different syntax but equivalent
 	//card := newCard()
@@ -9,7 +7,7 @@ func main() {
 	// array is fixed length ; slice is C# list or JS array
 	// both must be defined with a data type
 
-	cards := newDeck()
+	//cards := newDeck()
 	//cards = append(cards, "Six of Spades") //append returns a new slice
 	//cards.print()
 
@@ -18,8 +16,11 @@ func main() {
 	//hand.print()
 	//remainingDeck.print()
 
-	fmt.Println(cards.toString())
-	cards.saveToFile("my_cards")
+	//fmt.Println(cards.toString())
+	//cards.saveToFile("my_cards")
+
+	cards := newDeckFromFile("my_cards")
+	cards.print()
 
 }
 
