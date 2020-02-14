@@ -14,3 +14,5 @@ leaving off the last [2:] will give us everything from the first index specified
 Built in libaries in go often take in byte slices instead of strings.
 
 it can be done simply by []byte(string) to convert the data type.
+
+-- basic error handling
