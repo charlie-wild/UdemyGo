@@ -8,3 +8,9 @@ fruits[0:2] will give us the 0 and 1 index of the slice.
 
 leaving off the first argument [:2] will be interpreted as going from the start.
 leaving off the last [2:] will give us everything from the first index specified to the end. 
+
+-- converting strings to byte slices
+
+Built in libaries in go often take in byte slices instead of strings.
+
+it can be done simply by []byte(string) to convert the data type.
