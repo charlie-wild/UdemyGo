@@ -1,0 +1,10 @@
+Slice range syntax.
+
+- to specify a range in a Slice
+
+slice[startIndexIncluding : upToNotIncluding]
+
+fruits[0:2] will give us the 0 and 1 index of the slice.
+
+leaving off the first argument [:2] will be interpreted as going from the start.
+leaving off the last [2:] will give us everything from the first index specified to the end. 
