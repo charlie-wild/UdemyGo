@@ -18,3 +18,7 @@ it can be done simply by []byte(string) to convert the data type.
 -- basic error handling
  
  what to we want to do when there is an error?
+
+ // structs
+
+ data structures for collections of properties that are gathered together
