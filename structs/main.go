@@ -4,9 +4,15 @@ import "fmt"
 
 //first define fields
 
+type contactInfo struct {
+	email string
+	zipCode int
+}
+
 type person struct {
 	firstName string
 	lastName string
+	contact contactInfo
 }
 
 func main() {
@@ -14,7 +20,13 @@ func main() {
 	//alex := person{firstName:"Alex",lastName:"Test"}
 	var alex person
 	alex.firstName = "Alex"
-	fmt.Println(alex)
-	fmt.Printf("%+v", alex)
-	
+	alex.lastName = "Anderson"
+	jim := person{
+		firstName: "Jim",
+		lastName: "Party",
+		contact: contactInfo{
+			email: "email@gmail.com",
+			zipCode: 90210, //remember the commas...
+		},
+	}
 }
