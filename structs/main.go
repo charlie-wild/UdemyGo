@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 //first define fields
 
 type contactInfo struct {
