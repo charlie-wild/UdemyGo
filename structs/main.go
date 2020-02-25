@@ -1,6 +1,7 @@
 package main
 
 //first define fields
+import "fmt"
 
 type contactInfo struct {
 	email string
@@ -10,7 +11,7 @@ type contactInfo struct {
 type person struct {
 	firstName string
 	lastName string
-	contact contactInfo
+	contactInfo // this is the same as contactInfo (fieldName) contactInfo(struct)
 }
 
 func main() {
@@ -22,9 +23,14 @@ func main() {
 	jim := person{
 		firstName: "Jim",
 		lastName: "Party",
-		contact: contactInfo{
+		contactInfo: contactInfo{
 			email: "email@gmail.com",
 			zipCode: 90210, //remember the commas...
 		},
 	}
+	jim.print()
+}
+
+func (p person) print() {
+	fmt.Printf("%+v", p)
 }
