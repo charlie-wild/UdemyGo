@@ -28,9 +28,14 @@ func main() {
 			zipCode: 90210, //remember the commas...
 		},
 	}
-	jimPointer := &jim //the & gives us access to the RAM address where the variable is sitting
+	//jimPointer := &jim //the & gives us access to the RAM address where the variable is sitting
 
-	jimPointer.updateName("Jimmy")
+
+	 // we don't need the above line as if we have a variable of type person, and the receiver function acts on the pointer, go will turn the variable into a pointer
+	 
+	 // we don't need to coax out the memory address!
+	
+	jim.updateName("Jimmy")
 	jim.print()
 }
 
