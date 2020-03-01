@@ -1,0 +1,13 @@
+- arrays are primitive data structures that cannot be resized. 
+- most of the time we will use slices.
+
+slices are stored as arrays in memory. when we copy a slice, we talk to the original array!
+
+even though the slice data structure is being copied, its pointing at the same 
+array in memory. 
+
+/value/ types need pointers if we are going to modify them.
+int, float, string, bool, struct
+
+/reference/ types don't. 
+slices, maps, channels, pointers, functions 

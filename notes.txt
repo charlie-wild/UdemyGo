@@ -22,3 +22,7 @@ it can be done simply by []byte(string) to convert the data type.
  // structs
 
  data structures for collections of properties that are gathered together
+
+ // go is known as a pass by value language
+ when we reassign it is not mutating the original struct, but 
+ copying it and putting it in a new place in memory
