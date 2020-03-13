@@ -12,6 +12,8 @@ func main() {
 
 	// no dot syntax available with maps
 
+	delete(colors, "white")
+
 	fmt.Println(colors)
 
 }
