@@ -26,3 +26,5 @@ it can be done simply by []byte(string) to convert the data type.
  // go is known as a pass by value language
  when we reassign it is not mutating the original struct, but 
  copying it and putting it in a new place in memory
+
+ we use interfaces to define a method set. Anything that matches the description in the interface becomes part of the declared type
