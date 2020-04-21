@@ -18,7 +18,7 @@ func main() {
 	printGreeting(sb)
 }
 
-func printGreeting(b bot) {
+func printGreeting(b bot) {   //members of type bot can call this function 
 	fmt.Println(b.getGreeting())
 }
 
