@@ -14,5 +14,5 @@ func main()  {
 		 os.Exit(1)
 	 }
 
-	 fmt.Println(resp) // ooh imagine if you could do this!
+	 // create a byte slice that holds the data written into by the read function
 }
