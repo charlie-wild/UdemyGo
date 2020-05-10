@@ -21,6 +21,7 @@ func main() {
 
 	
 	printArea(newTriangle)
+	printArea(newSquare)
 
 }
 
@@ -28,10 +29,10 @@ func printArea(s shape) {
 	fmt.Println(s.getArea())
 }
 
-func (triangle) getArea(height float64, base float64) float64 {
-	return 0.5*base*height
+func (t triangle) getArea() float64 {
+	return 0.5*t.base*t.height
 }
 
-func (square) getArea(sideLength float64) float64 {
-	return sideLength*sideLength
+func (s square) getArea() float64 {
+	return s.sideLength*s.sideLength
 }
