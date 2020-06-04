@@ -15,7 +15,7 @@ func main() {
 	}
 
 	for _, link := range links {
-		checkLink(link)
+		go checkLink(link)
 	}
 }
 
@@ -26,5 +26,5 @@ func checkLink(link string) {
 		return
 	}
 
-	fmt.Println(link, "is ok")
+	fmt.Println(link, "is ok!")
 }
