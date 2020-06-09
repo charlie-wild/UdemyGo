@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	fmt.Println("test")
+	fmt.Println(os.Args) //print out command line arguments to program
 }
