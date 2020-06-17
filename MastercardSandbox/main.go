@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -9,20 +10,27 @@ import (
 )
 
 func main() {
-
+	//lambda.Start(HandleRequest)
 	fmt.Println(httpRead())
 
 }
 
+func HandleRequest(ctx context.Context) (string, error) {
+	resp := httpRead()
+	return resp, nil
+}
+
 func httpRead() string {
-	resp, err := http.Get("https://google.com")
+	client := &http.Client{}
+	req, err := http.NewRequest("GET", "https://google.com", nil)
+	req.Header.Add("Header", "Value")
+	resp, err := client.Do(req)
 
 	if err != nil {
 		log.Fatalln(err)
 	}
 
 	defer resp.Body.Close()
-
 	body, err := ioutil.ReadAll(resp.Body)
 
 	if err != nil {
