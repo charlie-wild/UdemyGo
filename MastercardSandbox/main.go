@@ -5,10 +5,16 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	//"github.com/gomodule/oauth1/oauth" //package for OAuth1.0a header complier
 )
 
 func main() {
 
+	fmt.Println(httpRead())
+
+}
+
+func httpRead() string {
 	resp, err := http.Get("https://google.com")
 
 	if err != nil {
@@ -23,5 +29,6 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	fmt.Println(string(body))
+	return (string(body))
+
 }
